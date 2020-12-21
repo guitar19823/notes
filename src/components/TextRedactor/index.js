@@ -28,7 +28,7 @@ const TextRedactor = props => {
   };
 
   const hanleSave = () => {
-    redact && onSave(id, input.current.value, textarea.current.value);
+    redact && activeSave && onSave(id, input.current.value, textarea.current.value);
     setActiveSave(false);
   };
 
