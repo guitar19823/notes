@@ -1,0 +1,84 @@
+.NoteList {
+  width: 100%;
+  height: 100%;
+  color: #e5e5e5;
+}
+
+.NoteList_items {
+  list-style: none;
+  overflow-y: auto;
+  width: 100%;
+  height: calc(100% - 120px);
+  padding: 12px 0;
+}
+
+.NoteList_item_default,
+.NoteList_item_active {
+  padding: 10px 7px 10px 14px;
+  height: 38px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.NoteList_item_default:hover {
+  background: #555;
+}
+
+.NoteList_item_active {
+  background: #fdd657;
+  color: #252525;
+}
+
+.NodeList_footer {
+  padding-top: 10px;
+  width: 100%;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.NoteList_delete-count {
+  padding: 10px 7px 10px 14px;
+  width: 100%;
+  height: 34px;
+  line-height: 14px;
+  font-size: 11px;
+  color: #858585;
+  position: relative;
+}
+
+.NoteList_delete-count > span {
+  position: absolute;
+  display: inline-block;
+  background: #252525;
+  padding-right: 10px;
+}
+
+.NoteList_delete-count::before {
+  position: absolute;
+  top: 16px;
+  left: 14px;
+  z-index: 0;
+  display: inline-block;
+  width: calc(100% - 14px);
+  content: "";
+  border-top: 1px solid #858585;
+}
+
+.NoteList_add-new {
+  display: block;
+  padding: 10px 7px 10px 14px;
+  cursor: pointer;
+}
+
+.NoteList-search {
+  background: #333;
+  color: #858585;
+  margin: 7px;
+  text-align: center;
+  padding: 4px;
+  border-radius: 3px;
+}

@@ -1,0 +1,124 @@
+.Aside {
+  width: 224px;
+  height: 100%;
+  background: #252525;
+}
+
+.Aside header {
+  width: 100%;
+  height: 38px;
+  padding: 14px 7px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.window-control-buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px;
+  width: 63px;
+}
+
+.window-control-buttons_close,
+.window-control-buttons_roll-up,
+.window-control-buttons_expand {
+  width: 12px;
+  height: 12px;
+  border-radius: 52%;
+  cursor: pointer;
+}
+
+.window-control-buttons_close {
+  background: #f86253;
+  box-shadow: inset 0 0 2px #d05348;
+}
+
+.window-control-buttons_roll-up {
+  background: #fcbd2c;
+  box-shadow: inset 0 0 2px #cb9923;
+}
+
+.window-control-buttons_expand {
+  background: #2cc842;
+  box-shadow: inset 0 0 2px #1e8a2d;
+}
+
+.Aside_header-cloud {
+  position: relative;
+  width: 36px;
+  height: 20px;
+  background: #333;
+  border-radius: 3px;
+  overflow: hidden;
+  color: #e5e5e5;
+}
+
+.Aside_header-cloud::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url('../../assets/img/cloud.png') no-repeat 5px;
+  background-size: 52%;
+}
+
+.Aside_header-cloud > div {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  height: 12px;
+  width: 12px;
+  border: .5px solid #fff;
+  border-radius: 50%;
+  animation: rotate-spinner 1s linear infinite;
+}
+
+@keyframes rotate-spinner {
+  from {transform: rotateZ(45deg)}
+  to {transform: rotateZ(225deg)}
+}
+
+.Aside_header-cloud > div::before,
+.Aside_header-cloud > div::after {
+  position: absolute;
+  content: "";
+  display: block;
+}
+
+.Aside_header-cloud > div::before {
+  top: -1.8px;
+  right: 50%;
+  transform: translateX(1px) rotateZ(45deg);
+  border-top: 1.8px solid #fff;
+  border-left: 1.8px solid transparent;
+  border-bottom: 1.8px solid transparent;
+  border-right: 1.8px solid #fff;
+}
+
+.Aside_header-cloud > div::after {
+  bottom: -1.8px;
+  left: 50%;
+  transform: translateX(-1px) rotateZ(45deg);
+  border-top: 1.8px solid transparent;
+  border-left: 1.8px solid #fff;
+  border-bottom: 1.8px solid #fff;
+  border-right: 1.8px solid transparent;
+}
+
+.Aside ::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+  background: transparent;
+}
+
+.Aside ::-webkit-scrollbar-thumb {
+  background: #e5e5e5;
+  border-radius: 3px;
+}
+
+.Aside main {
+  height: calc(100% - 38px);
+  width: 100%;
+  color: #e5e5e5;
+}

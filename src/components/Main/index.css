@@ -1,0 +1,16 @@
+.Main {
+  width: 800px;
+  height: 100%;
+  background: #fff;
+}
+
+.Main ::-webkit-scrollbar {
+  width: 2px;
+  height: 4px;
+  background: transparent;
+}
+
+.Main ::-webkit-scrollbar-thumb {
+  background: #252525;
+  border-radius: 3px;
+}
