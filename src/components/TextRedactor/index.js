@@ -27,7 +27,7 @@ const TextRedactor = props => {
     setActiveSave(false);
   };
 
-  const hanleSave = () => {
+  const handleSave = () => {
     redact && activeSave && onSave(id, input.current.value, textarea.current.value);
     setActiveSave(false);
   };
@@ -48,7 +48,7 @@ const TextRedactor = props => {
         <div
           title="Сохранить"
           className={`TextRedactor_save_${activeSave ? 'active' : 'default'}`}
-          onClick={hanleSave}
+          onClick={handleSave}
         />
       </div>
 
